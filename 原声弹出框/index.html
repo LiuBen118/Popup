@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<button id="pop">alert</button>
+	<script src="js/jQ.js"></script>
+	<script src="js/script.js"></script>
+	<script>
+		// var popp = document.getElementById( 'pop' );
+		// popp.onclick=function(){
+		// 	pop.pop( {
+		// 		title : "信息",
+		// 		contemt : "这是一条信息",
+		// 		btn : ["确认",'取消']
+		// 	} )
+		// }
+		
+		$('#pop').on('click',function(){
+			$('body').Pop({
+				title : "信息",
+				contemt : "这是一条信息",
+				btn : ["确认",'取消'],
+				move : true,
+				yes : function(){
+					alert( 'ok' )
+				},
+				file : function(){
+					alert( 'file' )
+				}
+			})
+		})
+
+
+		
+
+		
+
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+body {
+  height: 1000px;
+}
+.del {
+  -webkit-animation: Del 0.4s linear 1;
+}
+.mark {
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  z-index: 100;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+.mark .oBox {
+  width: 251px;
+  height: 145px;
+  background: #FFF;
+  position: relative;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -125px;
+  margin-top: -72.5px;
+  z-index: 101;
+  border-radius: 6px;
+  -webkit-animation: Pop 0.4s linear;
+}
+.mark .oBox h2 {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+}
+.mark .oBox p {
+  width: 100%;
+  font-size: 15px;
+  color: #000;
+  text-align: center;
+}
+.mark .oBox div {
+  position: absolute;
+  left: 0;
+  bottom: 6px;
+  width: 100%;
+  text-align: center;
+}
+.mark .oBox div span {
+  padding: 0 45px;
+}
+.mark .oBox div a {
+  color: #333;
+  font-size: 15px;
+  -webkit-transition: all .2s linear;
+}
+.mark .oBox div a.ok {
+  color: orange;
+}
+.mark .oBox div a:hover {
+  -webkit-transition: all .2s linear;
+  font-size: 18px;
+}
+@-webkit-keyframes Pop {
+  0% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes Del {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
